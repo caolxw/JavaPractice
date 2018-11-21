@@ -13,6 +13,77 @@ public class Regex_Demo3 {
 		
 		demo3();
 		System.out.println("-----demo3 end-----");
+		
+		demo4();
+		System.out.println("-----demo4 end-----");
+		
+		demo5();
+		System.out.println("-----demo5 end-----");
+		
+		demo6();
+		System.out.println("-----demo6 end-----");
+		
+		demo7();
+		System.out.println("-----demo7 end-----");
+		
+		demo8();
+		System.out.println("-----demo8 end-----");
+	}
+
+	public static void demo8() {
+		/*
+		 * 需求：
+		 * 初始字符串：我我我....要..要.学学学...编...编程程程
+		 * 输出字符串：我要学编程
+		 */
+		
+		String string = "我我我....我要..要.学学学...编...编程程程";
+		String string2 = string.replaceAll("\\.+", "");		//去除.
+		System.out.println(string2.replaceAll("(.)\\1+", "$1"));	//$1表示第一个组的内容
+	}
+
+	public static void demo7() {
+		/*
+		 * 需求：按照叠词切割字符串：sdqqfgkkkhjpppklm;
+		 */
+		
+		String string = "sdqqfgkkkhjpppklm";
+		String regex = "(.)\\1+";				//+代表第一组出现一次或者多次
+		String[] arr = string.split(regex);
+		
+		for(String string2 : arr) {
+			System.out.println(string2);
+		}
+	}
+
+	public static void demo6() {
+		//叠词的正则表达式
+		String regex = "(.)\\1(.)\\2";		//\\1表示第一组又出现一次 \\2表示第二组又出现一次
+		System.out.println("aabb".matches(regex));
+		System.out.println("快快乐乐".matches(regex));
+		System.out.println("快乐快乐".matches(regex));
+		
+		String regex2 = "(..)\\1";
+		System.out.println("abab".matches(regex2));
+		System.out.println("快快乐乐".matches(regex2));
+		System.out.println("快乐快乐".matches(regex2));
+	}
+
+	public static void demo5() {
+		String string = "I'm a1 cute2 panda";
+		String regex = "\\d";
+		String string2 = "I'm a1 cute2344 panda";
+		
+		System.out.println(string.replaceAll(regex, ""));
+		System.out.println(string2.replaceAll(regex, ""));
+	}
+
+	public static void demo4() {
+		String s = "Sam .Jame .Jack .Tom";
+		String[] arr = s.split("\\.");		//通过正则表达式切割字符串
+		for(String string : arr) {
+			System.out.println(string);
+		}
 	}
 
 	public static void demo3() {
