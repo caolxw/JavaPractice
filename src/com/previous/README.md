@@ -42,7 +42,7 @@ null 0
 猜数游戏的练习
 ## 8，InnerDemo 
 *内部类*相关知识以及*匿名内部类*相关知识。  
-内部类的创建方法：
+内部类对象的创建方法：
 ```
 //外部类名.内部类名 对象名 = 外部类名.内部类对象
 Outer.Inner1 inner1 = new Outer().Inner1();
@@ -68,8 +68,10 @@ Outer.Inner1 inner1 = new Outer().Inner1();
 *static*修饰相关知识。
 ## 13，StringBufferDemo 
 *StringBuffer*相关使用，StringBuffer和StringBuilder区别，String和StringBuffer区别。  
-* String -> StringBuffer* ：构造函数和append()  
-*StringBuffer -> String * ：构造函数，toString()和subString()
+
++ *String -> StringBuffer* ：构造函数和append()  
++ *StringBuffer -> String* ：构造函数，toString()和subString()  
+
 ## 14，StringDemo 
 *String* 相关知识：
 
