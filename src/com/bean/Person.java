@@ -20,8 +20,18 @@ public class Person implements Comparable<Person>{
 	public int getAge() {
 		return age;
 	}
-	public void setAge(int age) {
-		this.age = age;
+	public void setAge(int age) /*throws Exception*/{		//声明异常
+		if (age >= 0) {
+			this.age = age;
+		}else {
+			System.out.println("请回火星吧！");
+//			throw new Exception("年龄非法");	
+			
+			//抛出运行时异常 不用在方法上声明
+			throw new RuntimeException("年龄非法");				//抛出异常
+			
+		}
+		
 	}
 	@Override
 	public String toString() {
