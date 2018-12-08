@@ -108,7 +108,7 @@ class MyRunnable implements Runnable{
 	public void run() {
 		// TODO Auto-generated method stub
 		for(int i=0; i<1000; i++) {
-			System.out.println("ccccccc");
+			System.out.println(Thread.currentThread().getName()+"..."+i);
 		}
 	}
 	
