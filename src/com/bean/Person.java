@@ -91,5 +91,11 @@ public class Person implements Comparable<Person>,Serializable{
 		
 	}
 	
+	public void eat() {
+		System.out.println("今天吃了一顿金钱豹");
+	}
 	
+	public void eat(int num) {
+		System.out.println("今天吃了"+num+"元的大餐");
+	}
 }
